@@ -149,6 +149,30 @@ nav ul li:last-child a {
         }
     }
 }
+
+@media (max-width: 768px) {
+    /* Adjust hero section bottom padding for smaller screens */
+    #hero {
+        padding-bottom: 40px; /* Reduce the bottom padding */
+    }
+
+    /* Adjust top margin for the services section */
+    #services {
+        margin-top: 20px; /* Increase the top margin to create more space */
+    }
+}
+
+@media (max-width: 480px) {
+    #hero {
+        padding-bottom: 30px; /* Further reduce padding on very small screens */
+    }
+
+    #services {
+        margin-top: 25px; /* Increase space for visual clarity on small screens */
+    }
+}
+
+
 html, body {
     overflow-x: hidden;
 }
