@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const img = document.createElement("img");
         img.src = image.src;
         img.alt = image.alt; // Customize alt text as needed
+        img.loading = "lazy"; // Enable lazy-loading for optimized loading
 
         zoomContainer.appendChild(img);
         slide.appendChild(zoomContainer);
