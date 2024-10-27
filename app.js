@@ -1,37 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Array of image paths
-    const imagePaths = [
-        "galerii/IMG_20200123_150205.jpg",
-        "galerii/IMG_20220420_173352.jpg",
-        "galerii/IMG_20220504_160356.jpg",
-        "galerii/IMG_20220523_142843.jpg",
-        "galerii/IMG_20220721_171224.jpg",
-        "galerii/74967746_111014193683796_1173667699885080576_n.jpg",
-        "galerii/75398131_111013953683820_4700289222353879040_n.jpg",
-        "galerii/75439303_111014163683799_7213036259508224000_n.jpg",
-        "galerii/331538563_1660583681025488_3846164463612154615_n.jpg",
-        "galerii/363355009_760098972783375_4649593209159172349_n.jpg",
-        "galerii/FB_IMG_1682881006133.jpg",
-        "galerii/IMG_20180908_161454.jpg",
-        "galerii/IMG_20180914_162343.jpg",
-        "galerii/IMG_20190508_121215.jpg",
-        "galerii/IMG_20190527_134324.jpg",
-        "galerii/IMG_20190628_174748.jpg",
-        "galerii/IMG_20190806_122349.jpg",
-        "galerii/IMG_20190813_133524.jpg",
-        "galerii/IMG_20190813_134401.jpg",
-        "galerii/IMG_20190912_194014.jpg"
+    // JSON structure for images with additional metadata
+    const imageData = [
+        { "src": "galerii/IMG_20200123_150205.jpg", "alt": "A beautiful wooden fence surrounding a garden" },
+        { "src": "galerii/IMG_20220420_173352.jpg", "alt": "Modern metal fence in an urban setting" },
+        { "src": "galerii/IMG_20220504_160356.jpg", "alt": "A sturdy wire fence enclosing a large area" },
+        { "src": "galerii/IMG_20220523_142843.jpg", "alt": "Elegant stone and metal fence combination" },
+        { "src": "galerii/IMG_20220721_171224.jpg", "alt": "Decorative white picket fence for a cottage-style home" },
+        { "src": "galerii/74967746_111014193683796_1173667699885080576_n.jpg", "alt": "Stylish black iron fence with intricate details" },
+        { "src": "galerii/75398131_111013953683820_4700289222353879040_n.jpg", "alt": "Tall privacy fence made of natural wood" },
+        { "src": "galerii/75439303_111014163683799_7213036259508224000_n.jpg", "alt": "Classic garden fence with a gate" },
+        { "src": "galerii/331538563_1660583681025488_3846164463612154615_n.jpg", "alt": "Vinyl fence designed for a modern backyard" },
+        { "src": "galerii/363355009_760098972783375_4649593209159172349_n.jpg", "alt": "Chain-link fence for a commercial space" },
+        { "src": "galerii/FB_IMG_1682881006133.jpg", "alt": "Elegant wrought iron fence with floral accents" },
+        { "src": "galerii/IMG_20180908_161454.jpg", "alt": "Rustic split-rail fence for countryside property" },
+        { "src": "galerii/IMG_20180914_162343.jpg", "alt": "Privacy fence with lattice design on top" },
+        { "src": "galerii/IMG_20190508_121215.jpg", "alt": "White vinyl fence surrounding a family backyard" },
+        { "src": "galerii/IMG_20190527_134324.jpg", "alt": "Simple wooden fence for a suburban home" },
+        { "src": "galerii/IMG_20190628_174748.jpg", "alt": "Tall metal fence for added security" },
+        { "src": "galerii/IMG_20190806_122349.jpg", "alt": "Elegant iron fence with curved design elements" },
+        { "src": "galerii/IMG_20190813_133524.jpg", "alt": "Sturdy chain-link fence for pet containment" },
+        { "src": "galerii/IMG_20190813_134401.jpg", "alt": "Wooden fence with horizontal slats for a sleek look" },
+        { "src": "galerii/IMG_20190912_194014.jpg", "alt": "Traditional picket fence with charming style" }
+        // Add more images here as needed
     ];
 
     // Select Swiper wrapper and dynamically add images
     const swiperWrapper = document.querySelector(".swiper-wrapper");
-    imagePaths.forEach(path => {
+    imageData.forEach(image => {
         const slide = document.createElement("div");
         slide.classList.add("swiper-slide");
 
         const img = document.createElement("img");
-        img.src = path;
-        img.alt = "Gallery Image"; // Customize alt text as needed
+        img.src = image.src;
+        img.alt = image.alt; // Customize alt text as needed
 
         slide.appendChild(img);
         swiperWrapper.appendChild(slide);
@@ -126,4 +127,17 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector('.form-error').style.display = 'block';
         }
     });
+
+    // JavaScript: Apply smooth scrolling with offset
+document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        
+        window.scrollTo({
+            top: target.offsetTop - 80, // Adjust the offset (e.g., 80px)
+            behavior: 'smooth'
+        });
+    });
+});
 

@@ -195,9 +195,10 @@ img, video {
     background-position: center calc(50% - 20px);
     background-repeat: no-repeat;
     background-size: 110%;
+    background-position-y: 40%; /* Move image down */
     color: white;
     text-align: center;
-    padding: 120px 20px;
+    padding: 120px 20px 60px 20px; /* Reduce bottom padding */
 }
 
 #hero h1 {
@@ -271,7 +272,7 @@ img, video {
 
 /* Services Section */
 #services {
-    padding: 60px 20px;
+    padding: 60px 20px 60px 20px; /* Reduce bottom padding */
     text-align: center;
 }
 
@@ -320,13 +321,14 @@ img, video {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    max-width: 90%;
+    width: 90%;
+    max-width: 600px;
     max-height: 90%;
     overflow-y: auto;
 }
 
 .modal-content img {
-    max-width: 40%;
+    max-width: 100%;
     margin-bottom: 15px;
 }
 
@@ -358,6 +360,7 @@ img, video {
     overflow: hidden;
     height: 200px;
     background-color: #001f3f;
+    border-radius: 10px;
 }
 
 .swiper-slide img {
@@ -365,6 +368,7 @@ img, video {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
+    
 }
 
 .swiper-slide img:hover {

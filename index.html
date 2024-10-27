@@ -1,24 +1,49 @@
 <!DOCTYPE html>
 <html lang="et">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>AiaABC - Sinu Kodune Aiapartner</title>
-    <meta name="description" content="AiaABC - Sinu kodune aiapartner alates 2005. Pakume laia valikut piirdeaedade, väravate ja aiamajakeste lahendusi koos automaatikalahendustega. Küsi pakkumist!">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AiaABC - Sinu usaldusväärne aiapartner</title>
+        <meta name="description" content="AiaABC - Sinu kogenud aiapartner alates 2005. Pakume personaalseid aialahendusi ja kvaliteetseid piirdeaedu koos kõige juurdekuuluvaga.">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <!-- Favicon Icons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <meta name="msapplication-TileColor" content="#001f3f">
+        <meta name="msapplication-TileImage" content="/mstile-150x150.png">
+
+    
+        <!-- Structured Data Schema for Local Business -->
+        <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://aiaabc.ee#localbusiness",
+          "name": "AiaABC",
+          "description": "Sinu kodune aiapartner alates 2005. Piirdeaedade, väravate ja aiamajakeste lahendused koos automaatikaga.",
+          "url": "https://aiaabc.ee",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Tammistu keskus 5",
+            "addressLocality": "Tartu",
+            "addressCountry": "EE"
+          },
+          "telephone": "+37258516323"
+        }
+        </script>
+    </head>
 <body>
     <!-- Header -->
     <header>
         <div class="logo">
-            <a href="#home"><img src="images/cropped-Logo960x960-150x108.png" alt="AiaABC Logo"></a>
+            <a href="#hero"><img src="images/cropped-Logo960x960-150x108.png" alt="AiaABC Logo"></a>
         </div>
         <nav>
             <ul>
-                <!-- <li><a href="#home">Avaleht</a></li> -->
                 <li><a href="#services">Teenused</a></li>
                 <li><a href="#contact">Kontakt</a></li>
                 <li><a href="#portfolio">Galerii</a></li>
@@ -31,7 +56,7 @@
         <h1>Sinu kodune aiapartner</h1>
         <p>Ideest lahenduseni vaid mõne nädalaga! Meil on üle kümne aasta kogemust piirdeaedade ja väravate ehitamisel, müümisel ja paigaldamisel. Pakume terviklahendusi, mis hõlmavad modernseid ja vastupidavaid lahendusi igale hoovile. Ükskõik, kas otsite traditsioonilist puitaeda või automaatikaga liugväravat – meie meeskond tagab täpse ja kvaliteetse töö.</p>
         <p>Usaldusväärsus, kvaliteet ja klientide rahulolu on meie prioriteedid. Teeme Teiega tihedat koostööd, et leida just Teile sobivaim lahendus.</p>
-        <button class="cta" id="scrollToContact">Küsi pakkumist!</button>
+        <button class="cta" id="scrollToContact" aria-label="Küsi pakkumist!">Küsi pakkumist!</button>
     </section>
     
 
@@ -39,30 +64,14 @@
     <section id="services">
         <h2>Meie teenused</h2>
         <ul>
-            <li class="service-item" data-img="images/IMG_20201009_163645.jpg" data-description="Puitaiad pakuvad klassikalist ja looduslähedast lahendust. Sobivad hästi igasse aeda." data-alt="Puitaiad - klassikaline ja looduslähedane lahendus">
-                Puitaiad
-            </li>
-            <li class="service-item" data-img="images/IMG_20220504_160356.jpg" data-description="Metallaiad on vastupidavad ja turvalised, sobides ideaalselt linnakeskkonda." data-alt="Metallaiad - turvaline lahendus linnakeskkonda">
-                Metall/Varbaiad
-            </li>
-            <li class="service-item" data-img="images/keevisaiad.jpg" data-description="Keevispaneelaiad on tugev ja praktiline valik suurematele aladele." data-alt="Keevispaneelaiad - praktiline lahendus">
-                Keevispaneelaiad
-            </li>
-            <li class="service-item" data-img="images/vorkaed.jpg" data-description="Võrkaiad on lihtne ja soodne lahendus, sobib hästi piiride tähistamiseks." data-alt="Võrkaiad - lihtne ja soodne lahendus">
-                Võrkaiad
-            </li>
-            <li class="service-item" data-img="images/varavad.jpg" data-description="Tiib- ja liugväravad pakuvad elegantsust ja praktilisust igale kinnistule." data-alt="Tiib- ja liugväravad - elegantsed ja praktilised">
-                Tiib-, Liug- ja jalgväravad
-            </li>
-            <li class="service-item" data-img="images/automaatikad.jpg" data-description="Väravaautomaatikad ja tõkkepuud muudavad liiklemise veelgi mugavamaks." data-alt="Väravaautomaatikad ja tõkkepuud - mugav liiklemine">
-                Väravaautomaatikad, tõkkepuud
-            </li>
-            <li class="service-item" data-img="images/kiviaed.jpg" data-description="Kivi- ja betoonpostidega aiad lisavad aiale elegantsust ja tugevust." data-alt="Kivi- ja betoonpostidega aiad - elegants ja tugevus">
-                Kivi – ja betoonpostidega aiad
-            </li>
-            <li class="service-item" data-img="images/puusepatood.jpg" data-description="Erilahendusega aiad ja puusepatööd vastavad kõigile Teie unikaalsetele nõudmistele." data-alt="Erilahendusega aiad ja puusepatööd - vastab Teie vajadustele">
-                Erilahendusega aiad, puusepatööd
-            </li>
+            <li class="service-item" data-img="galerii/331538563_1660583681025488_3846164463612154615_n.jpg" data-description="Puitaiad pakuvad klassikalist ja looduslähedast lahendust. Sobivad hästi igasse aeda." data-alt="Puitaiad - klassikaline ja looduslähedane lahendus">Puitaiad</li>
+            <li class="service-item" data-img="galerii/IMG_20190813_133524.jpg" data-description="Metallaiad on vastupidavad ja turvalised, sobides ideaalselt linnakeskkonda." data-alt="Metallaiad - turvaline lahendus linnakeskkonda">Metall/Varbaiad</li>
+            <li class="service-item" data-img="galerii/IMG_20180914_162343.jpg" data-description="Keevispaneelaiad on tugev ja praktiline valik suurematele aladele." data-alt="Keevispaneelaiad - praktiline lahendus">Keevispaneelaiad</li>
+            <li class="service-item" data-img="galerii/IMG_20200629_142221.jpg" data-description="Võrkaiad on lihtne ja soodne lahendus, sobib hästi piiride tähistamiseks." data-alt="Võrkaiad - lihtne ja soodne lahendus">Võrkaiad</li>
+            <li class="service-item" data-img="galerii/IMG_20220829_180333 (1).jpg" data-description="Tiib- ja liugväravad pakuvad elegantsust ja praktilisust igale kinnistule." data-alt="Tiib- ja liugväravad - elegantsed ja praktilised">Tiib-, Liug- ja jalgväravad</li>
+            <li class="service-item" data-img="galerii/IMG_20220923_104110.jpg" data-description="Väravaautomaatikad ja tõkkepuud muudavad liiklemise veelgi mugavamaks." data-alt="Väravaautomaatikad ja tõkkepuud - mugav liiklemine">Väravaautomaatikad, tõkkepuud</li>
+            <li class="service-item" data-img="galerii/IMG_20210914_170115.jpg" data-description="Kivi- ja betoonpostidega aiad lisavad aiale elegantsust ja tugevust." data-alt="Kivi- ja betoonpostidega aiad - elegants ja tugevus">Kivi – ja betoonpostidega aiad</li>
+            <li class="service-item" data-img="galerii/IMG_20190816_161741.jpg" data-description="Erilahendusega aiad ja puusepatööd vastavad kõigile Teie unikaalsetele nõudmistele." data-alt="Erilahendusega aiad ja puusepatööd - vastab Teie vajadustele">Erilahendusega aiad, puusepatööd</li>
         </ul>
     </section>
 
@@ -98,8 +107,6 @@
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
-
-        <!-- Add Navigation -->
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
     </div>
@@ -108,7 +115,7 @@
      <!-- Facebook CTA Block -->
      <div class="facebook-cta">
         <p>Vaata rohkem meie hiljutisi töid ja projekte meie Facebooki lehel!</p>
-        <a href="https://www.facebook.com/aiaabcd" target="_blank" class="facebook-link">
+        <a href="https://www.facebook.com/aiaabcd" target="_blank" rel="noopener noreferrer" class="facebook-link">
             <img src="images//2460233_facebook_social_online_share_icon.png" alt="Facebook" class="facebook-icon"> Külastage meie Facebooki lehte
         </a>
     </div>
@@ -119,7 +126,7 @@
     <footer>
         <p>© 2024 AiaABC. Kõik õigused kaitstud.</p>
         <div class="footer-links">
-            <a href="#home">Avaleht</a>
+            <a href="#hero">Avaleht</a>
             <a href="#services">Teenused</a>
             <a href="#contact">Kontakt</a>
         </div>
