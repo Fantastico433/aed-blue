@@ -198,7 +198,7 @@ img, video {
     background-position-y: 40%; /* Move image down */
     color: white;
     text-align: center;
-    padding: 120px 20px 60px 20px; /* Reduce bottom padding */
+    padding: 120px 20px 120px 20px; /* Reduce bottom padding */
 }
 
 #hero h1 {
