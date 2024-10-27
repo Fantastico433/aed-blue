@@ -85,25 +85,26 @@
     
 
      <!-- Contact Section -->
-     <section id="contact">
-        <h2>Võtke ühendust ja leiame Teile sobiva lahenduse</h2>
-        <form action="https://formspree.io/f/xldeeppl" method="POST" id="contactForm">
-            <input type="text" name="name" placeholder="Teie nimi" required>
-            <input type="email" name="email" placeholder="Teie email" required>
-            <!-- <input type="tel" name="phone" placeholder="Teie telefon" required> -->
-            <textarea name="message" placeholder="Teie sõnum" required></textarea>
-            <button type="submit">Küsi pakkumist!</button>
-            <p class="form-success" style="display:none;color:green;">Teie sõnum on saadetud!</p>
-            <p class="form-error" style="display:none;color:red;">Viga! Palun proovige uuesti.</p>
-        </form>
-    </section>
+<section id="contact">
+    <h2>Võtke ühendust ja leiame Teile sobiva lahenduse</h2>
+    <form action="https://formspree.io/f/xldeeppl" method="POST" id="contactForm">
+        <input type="text" name="name" placeholder="Teie nimi" required>
+        <input type="email" name="email" placeholder="Teie email" required>
+        <textarea name="message" placeholder="Teie sõnum" required></textarea>
+        <button type="submit">Küsi pakkumist!</button>
+    </form>
+    <!-- Success and error message elements -->
+    <p id="form-success" style="display:none; color:green;">Teie sõnum on saadetud!</p>
+    <p id="form-error" style="display:none; color:red;">Viga! Palun proovige uuesti.</p>
+</section>
+
 
 <!-- Portfolio Swiper Slider -->
 <section id="portfolio">
     <h2>Meie tööde näidised</h2>
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <!-- JavaScript will dynamically populate these slides -->
+            <!-- JavaScript will dynamically populate these slides with zoom containers -->
         </div>
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
@@ -111,6 +112,8 @@
         <div class="swiper-button-prev"></div>
     </div>
 </section>
+
+
 
      <!-- Facebook CTA Block -->
      <div class="facebook-cta">

@@ -30,11 +30,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const slide = document.createElement("div");
         slide.classList.add("swiper-slide");
 
+        // Create the zoom container and add the image
+        const zoomContainer = document.createElement("div");
+        zoomContainer.classList.add("swiper-zoom-container");
+
         const img = document.createElement("img");
         img.src = image.src;
         img.alt = image.alt; // Customize alt text as needed
 
-        slide.appendChild(img);
+        zoomContainer.appendChild(img);
+        slide.appendChild(zoomContainer);
         swiperWrapper.appendChild(slide);
     });
 
@@ -67,7 +72,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 slidesPerView: 3,
                 spaceBetween: 30,
             }
+        },
+        zoom: {
+            maxRatio: 2, // Adjust max zoom level as needed
         }
+    
+        
     });
 });
 
@@ -107,26 +117,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return modal;
     };
-
-    // Formspree submission handling
-    const contactForm = document.getElementById('contactForm');
-    contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        try {
-            const response = await fetch(contactForm.action, {
-                method: 'POST',
-                body: new FormData(contactForm),
-            });
-            if (response.ok) {
-                document.querySelector('.form-success').style.display = 'block';
-                contactForm.reset();
-            } else {
-                document.querySelector('.form-error').style.display = 'block';
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        const contactForm = document.getElementById('contactForm');
+        const formSuccess = document.getElementById('form-success');
+        const formError = document.getElementById('form-error');
+    
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json'
+                    },
+                    body: new FormData(contactForm),
+                });
+                
+                if (response.ok) {
+                    formSuccess.style.display = 'block';
+                    formError.style.display = 'none';
+                    contactForm.reset(); // Reset form fields on success
+                } else {
+                    formError.style.display = 'block';
+                    formSuccess.style.display = 'none';
+                }
+            } catch (error) {
+                console.error('Fetch error:', error);
+                formError.textContent = "Viga! Palun proovige uuesti.";
+                formError.style.display = 'block';
+                formSuccess.style.display = 'none';
             }
-        } catch (error) {
-            document.querySelector('.form-error').style.display = 'block';
-        }
+        });
     });
+    
+    
 
     // JavaScript: Apply smooth scrolling with offset
 document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {

@@ -269,6 +269,10 @@ img, video {
 #contact form button:hover {
     background-color: #002b5c;
 }
+#form-success, #form-error {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
 
 /* Services Section */
 #services {
