@@ -180,7 +180,7 @@ nav ul li:last-child a {
     height: 600px;
     background-position: center calc(50% - 20px);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 110%;
     color: white;
     text-align: center;
     padding: 120px 20px;
