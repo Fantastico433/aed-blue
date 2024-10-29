@@ -168,3 +168,19 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Preload images when hovering over elements with 'data-img' attributes
+function preloadImages() {
+    document.querySelectorAll('[data-img]').forEach(element => {
+        element.addEventListener('mouseenter', () => {
+            const imgSrc = element.getAttribute('data-img');
+            if (imgSrc) {
+                const img = new Image();
+                img.src = imgSrc;
+            }
+        });
+    });
+}
+
+// Call the function after DOM is fully loaded
+document.addEventListener('DOMContentLoaded', preloadImages);
+
