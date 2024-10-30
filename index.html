@@ -15,7 +15,7 @@
         <link rel="manifest" href="/site.webmanifest">
         <meta name="msapplication-TileColor" content="#001f3f">
         <meta name="msapplication-TileImage" content="/mstile-150x150.png">
-
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     
         <!-- Structured Data Schema for Local Business -->
         <script type="application/ld+json">
@@ -84,19 +84,23 @@
     </section>
     
 
-    <!-- Contact Section -->
-<section id="contact">
-    <h2>Võtke ühendust ja leiame Teile sobiva lahenduse</h2>
-    <form action="https://script.google.com/macros/s/AKfycbxaMsaV1y-FAaw7dUIjGG1Cg12vnVexcwlSUporVCXkXfeB2wpl3kj7A5YglERa70_I5A/exec" method="POST" id="contactForm">
-        <input type="text" name="name" placeholder="Teie nimi" required>
-        <input type="email" name="email" placeholder="Teie email" required>
-        <textarea name="message" placeholder="Teie sõnum" required></textarea>
-        <button type="submit">Küsi pakkumist!</button>
-    </form>
-    <!-- Success and error message elements -->
-    <p id="form-success" style="display:none; color:green;">Teie sõnum on saadetud!</p>
-    <p id="form-error" style="display:none; color:red;">Viga! Palun proovige uuesti.</p>
-</section>
+    <!-- Contact Form -->
+    <section id="contact">
+        <h2>Võtke ühendust ja leiame Teile sobiva lahenduse</h2>
+        <form action="https://script.google.com/macros/s/AKfycbwvmDj-UrO5eugaWaxwLwRO6_6h1ohSxXlhtb5SRfgxof3j8gpRGie-TFnRYOWXlf7iuA/exec" method="POST" id="contactForm">
+            <input type="text" name="name" placeholder="Teie nimi" required>
+            <input type="email" name="email" placeholder="Teie email" required>
+            <textarea name="message" placeholder="Teie sõnum" required></textarea>
+            
+            <!-- Add reCAPTCHA widget -->
+            <div class="g-recaptcha" data-sitekey="6LcwxXghAAAAAFrzfQmFfnGZt18HNfZc4PBr6hIL"></div>
+            
+            <button type="submit">Küsi pakkumist!</button>
+        </form>
+        <p id="form-success" style="display:none; color:green;">Teie sõnum on saadetud!</p>
+        <p id="form-error" style="display:none; color:red;">Viga! Palun proovige uuesti.</p>
+    </section>
+</body>
 
 
 <!-- Portfolio Swiper Slider -->
