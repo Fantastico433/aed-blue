@@ -146,13 +146,9 @@ function preloadImages() {
     });
 }
 
-// Call the function after DOM is fully loaded
-document.addEventListener('DOMContentLoaded', preloadImages);
-
-function verifyRecaptcha(token) {
-    const secretKey = "6LcwxXghAAAAAGvTwoQ-HHQv7ULGrZa-J2uPWUD8";
-    const url = `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`;
-    const response = UrlFetchApp.fetch(url);
-    const result = JSON.parse(response.getContentText());
-    return result.success;
+const recaptchaResponse = grecaptcha.getResponse();
+if (!recaptchaResponse) {
+    alert("Please complete the reCAPTCHA verification.");
+    return;
 }
+formData.append("g-recaptcha-response", recaptchaResponse); // Add reCAPTCHA token to form data
