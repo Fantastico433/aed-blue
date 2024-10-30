@@ -6,15 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
     contactForm.addEventListener("submit", async (e) => {
         e.preventDefault(); // Prevent default form submission
         const formData = new FormData(contactForm);
-        const data = Object.fromEntries(formData.entries());
 
         try {
             const response = await fetch(contactForm.action, {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(data)
+                body: formData // Send as FormData instead of JSON
             });
 
             if (response.ok) {
